@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'JavaScriptLearning/prisonersdilemma.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>JS Test Site</title>
+    </head>
+    <body>
+        <img class='background-img' src='{% static "JavaScriptLearning/background-img.jpg" %}' id='backgroundImg'>
+        <div id='newsletter'>
+            Sign Up Here!
+        </div>
+        <header id='header' class='container'>
+            <h1 class='item' style='padding-left:2vw;'>
+                Prisoner's Dilemma Simulator
+            </h1>
+            <div class='item right'>
+                <img src='{% static "JavaScriptLearning/githublogo.png" %}' style = 'height:2vh;width:2vw;'>
+            </div>
+        </header>
+        <div class='game-box'>
+            <div class='center'>
+                <h1 id='round'>Prisoner's Dilemma: Round 1</h1>
+            </div>
+            <div class='container relative'>
+                <div class='score item'>
+                    <div id='userName'>
+                        User Name
+                    </div>         
+                    <div id='userScore'>
+                        0
+                    </div>   
+                </div>
+                <div class='score item right'>
+                    <div>
+                        Computer
+                    </div>
+                    <div id='computerScore'>
+                        0
+                    </div>
+                </div>
+            </div>
+            <div class='center relative'>
+                <div id= 'gameOver'>Game Over!</div>
+                <div id='choices'>
+                    <input type='radio' name='choice' value='true'>Cooperate</br>
+                    <input type='radio'name='choice' value='false'>Defect</br>
+                </div>
+            </div>
+            <div class='container relative'>
+                <div class='item'>
+                    <button id='submit'>Submit</button>
+                </div>
+                <div class='item right'>
+                    <button id='startOver'>Start Over</button>
+                </div>
+            </div>
+        </div>
+        <div class='change-name' id='nameBox'>
+            <h1>Player Name</h1>
+            <input type='text' id='name' name='name' placeholder='Choose a Username'>
+            <button id='changeName'>Submit</button>
+        </div>
+        <footer>
+            &copy; 2020, Gus Robinson
+        </footer>
+        <script src='{% static "JavaScriptLearning/prisonersdilemma.js" %}'></script>
+    </body>
+</html>
